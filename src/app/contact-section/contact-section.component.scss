@@ -1,0 +1,58 @@
+/* contact-section.component.css */
+
+.Contact {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+
+}
+
+.heading {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.index{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading p {
+  margin: 0;
+}
+
+
+.number p{
+  margin: 5px;
+}
+.email p{
+  margin: 5px;
+}
+.socialMedia p{
+  margin: 5px 0;
+}
+
+/* Styling for the toggle icons (+ and -) */
+.heading span {
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 5px;
+  color: #333;
+}
+
+/* Styling for the visible content when toggled */
+.show {
+  display: block;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+  .Contact {
+    margin: 5px;
+  }
+}
+
+

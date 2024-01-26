@@ -1,0 +1,28 @@
+  <div class="main">
+
+    <!-- about section -->
+    <div class="about">
+      <h4>About Me:</h4>
+        <p><span>Hello</span>, I'm Mangesh Sanjay Kadus, a passionate Front-End Developer with a strong focus on creating dynamic user interfaces and seamless API integrations. My journey in the world of web development has been both enriching and fulfilling.</p>
+        <div *ngIf="isshowmore">
+          My professional journey began at Tata Consultancy Services, where I honed my skills and expertise as a Frontend Developer. During my time there, I had the opportunity to work on diverse projects, gaining valuable experience in crafting responsive and visually appealing user interfaces.
+          Currently, I am proud to be a part of the talented team at Bajaj Finserv Direct Limited, where I continue to thrive as a Frontend Developer. My responsibilities here include UI creation and the integration of APIs, ensuring that our applications not only look fantastic but also function flawlessly
+          Working with cutting-edge technologies, particularly the Angular framework, has been my forte. I find immense joy in transforming design concepts into interactive, user-friendly web applications that leave a positive impact.
+        </div>
+        <div *ngIf="isshowmore">
+          I believe in the power of collaboration and continuous learning. The ever-evolving landscape of web development keeps me motivated to stay updated with the latest trends and best practices in the field. This commitment to growth allows me to deliver high-quality solutions and exceed user expectations.
+          Outside of the coding world, I am [mention any hobbies or interests you'd like to share]. These passions provide me with a fresh perspective and creative inspiration that I often bring into my work.
+          Feel free to connect with me if you share a passion for web development or simply want to chat about the latest tech trends. I'm always excited to collaborate and learn from fellow professionals in the industry.
+        </div>
+        <div *ngIf="isshowmore">
+          Thank you for visiting my profile, and I look forward to connecting with you!
+        </div>
+         <button (click)="showLessMore()">{{btnName}}</button>
+    </div>
+ <!-- running ball on top -->
+    <div class="animation">
+      <div class="circle"></div>
+    </div>
+
+  </div>
+

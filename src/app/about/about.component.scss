@@ -1,0 +1,92 @@
+.main {
+  text-align: center;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+
+  button{
+    margin-top: 10px;
+    height: 30px;
+    width: 90px;
+    border-radius: 9px;
+    background: #F5F5F5;
+    color: black;
+  }
+  .about {
+    margin: auto;
+    width: 50%;
+    background: #F5F5F5;
+    color: black;
+    padding: 10px;
+    margin-top: 50px;
+
+    h4 {
+      margin: 1px;
+      font-family: fantasy;
+    }
+
+    span {
+      font-family: cursive;
+      font-size: 25px;
+      line-height: 0px;
+    }
+  }
+}
+
+.circle {
+  border-radius: 25px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid rgb(115, 110, 110);
+}
+
+.animation {
+  width: 35px;
+  height: 35px;
+  border-radius: 25px;
+  background-color: red;
+  position: absolute;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 13px 0px 9px 1px #aaaaaa;
+}
+
+
+
+@keyframes example {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 11%;
+  }
+
+  25% {
+    background-color: yellow;
+    left: 30%;
+    top: 11%;
+  }
+
+  50% {
+    background-color: blue;
+    left: 60%;
+    top: 11%;
+  }
+
+  75% {
+    background-color: green;
+    left: 80%;
+    top: 11%;
+  }
+
+  100% {
+    background-color: red;
+    left: 95%;
+    top: 11%;
+  }
+}
+
