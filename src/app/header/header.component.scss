@@ -17,7 +17,9 @@ nav a {
   padding: 10px;
   margin: 0 10px;
 }
-
+nav a:hover{
+  color: greenyellow;
+}
 @media screen and (max-width: 600px) {
   nav {
     flex-direction: column;
