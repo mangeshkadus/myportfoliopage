@@ -1,10 +1,14 @@
-/* inner-section.component.scss */
-
+:host {
+  height: auto;
+  background-color: #0e0d0d;
+}
 .innerMain {
   margin: 20px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: white;
+  height: auto;
 
   .experience {
     font-size: 18px;
@@ -59,4 +63,57 @@
          }
        }
      }
+
+         .experience-heading {
+           text-align: center;
+           margin-bottom: 30px;
+         }
+
+         .experience-heading h2 {
+           font-size: 48px;
+           font-weight: bold;
+           color: #f56333;
+           /* Adjust color as needed */
+           text-transform: uppercase;
+           letter-spacing: 2px;
+           margin-bottom: 10px;
+           animation: bounceInDown 1s ease-in-out;
+           /* Apply bounceInDown animation */
+         }
+
+         .experience-heading p {
+           font-size: 20px;
+           color: #666;
+           /* Adjust color as needed */
+           animation: fadeInUp 1s ease-in-out;
+           /* Apply fadeInUp animation */
+         }
+
+         @keyframes bounceInDown {
+           0% {
+             transform: translateY(-50px);
+             opacity: 0;
+           }
+
+           70% {
+             transform: translateY(10px);
+           }
+
+           100% {
+             transform: translateY(0);
+             opacity: 1;
+           }
+         }
+
+         @keyframes fadeInUp {
+           0% {
+             transform: translateY(50px);
+             opacity: 0;
+           }
+
+           100% {
+             transform: translateY(0);
+             opacity: 1;
+           }
+         }
 }

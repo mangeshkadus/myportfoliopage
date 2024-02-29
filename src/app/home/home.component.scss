@@ -3,19 +3,43 @@
 .homeMain {
   text-align: center;
   margin: 0px;
-  background-color: #edd9be;
+  background-color: black;
   display: flex;
-    flex-direction: column;
-    align-items: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
 
   h2 {
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 10px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    animation: slideInFromLeft 1.5s ease-out;
+  }
+  @keyframes slideInFromLeft {
+   0% {
+     transform: translateX(-100%);
+     opacity: 0;
+   }
+
+   60% {
+     transform: translateX(25%);
+   }
+
+   80% {
+     transform: translateX(-10%);
+   }
+
+   100% {
+     transform: translateX(0);
+     opacity: 1;
+   }
   }
 
   .subtext {
     font-size: 16px;
-    color: #555;
+    color: #7cf267;
     text-align: center;
     max-width: 50%;
   }
@@ -30,4 +54,36 @@
         margin: 0px;
       }
     }
+
+ .landing-container {
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: transparent;
+   /* Set background color to transparent */
+   opacity: 0;
+   /* Initially hidden */
+   transform: scale(0.5);
+   /* Initially scaled down */
+   transition: opacity 0.8s ease, transform 0.8s ease;
+   /* Smooth transition */
+ }
+
+ .landing-content {
+   text-align: center;
+   color: white;
+   /* Text color */
+ }
+
+ .landing-container.show {
+   opacity: 1;
+   /* Fade in */
+   transform: scale(1);
+   /* Scale up */
+ }
+
+ .scrollIt {
+  color: #7cf267;
+ }
 }

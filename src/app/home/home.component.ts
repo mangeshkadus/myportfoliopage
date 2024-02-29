@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, ElementRef, QueryList, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.changePosition();
   }
-changePosition() {
+  changePosition() {
     const intervalId = setInterval(() => {
       if (this.currentIndex < this.dataArray.length) {
         this.position = this.dataArray[this.currentIndex];
@@ -25,5 +25,24 @@ changePosition() {
         this.currentIndex = 0;
       }
     }, 2000);
+  }
+  @ViewChildren('landingContainer') landingContainers!: QueryList<ElementRef>;
+
+  showLandingAnimation: boolean = false;
+
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const windowHeight = window.innerHeight;
+
+    this.landingContainers.forEach(container => {
+      const elementTop = container.nativeElement.getBoundingClientRect().top + scrollTop;
+
+      if (elementTop < windowHeight * 0.8) {
+        container.nativeElement.classList.add('show');
+      } else {
+        container.nativeElement.classList.remove('show');
+      }
+    });
   }
 }

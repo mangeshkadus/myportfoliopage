@@ -1,41 +1,33 @@
-  <div class="main">
-
-    <!-- about section -->
-    <div class="Skills">
-      <h4>Skills</h4>
-      <p>Languages: TypeScript, JavaScript, HTML5, CSS3, JAVA</p>
-      <p> • Front-end Frameworks: Angular (Angular 2+)</p>
-      <p>•Version Control: Git, GitHub</p>
-      <p>•Build Tools: p m , Docker, Jenkins</p>
-      <p>•Testing: unit testing</p>
-      <p>•RESTful Services: Consuming and building</p>
-    </div>
-    <div class="certification">
-      <h4>Certification</h4>
-      <p>•Angular Certification: Basic to Advanced</p>
-    </div>
-    <div class="about">
-      <h4>About Me:</h4>
-        <p><span>Hello</span>, I'm Mangesh Sanjay Kadus, a passionate Front-End Developer with a strong focus on creating dynamic user interfaces and seamless API integrations. My journey in the world of web development has been both enriching and fulfilling.</p>
-        <div *ngIf="isshowmore">
-          My professional journey began at Tata Consultancy Services, where I honed my skills and expertise as a Frontend Developer. During my time there, I had the opportunity to work on diverse projects, gaining valuable experience in crafting responsive and visually appealing user interfaces.
-          Currently, I am proud to be a part of the talented team at Bajaj Finserv Direct Limited, where I continue to thrive as a Frontend Developer. My responsibilities here include UI creation and the integration of APIs, ensuring that our applications not only look fantastic but also function flawlessly
-          Working with cutting-edge technologies, particularly the Angular framework, has been my forte. I find immense joy in transforming design concepts into interactive, user-friendly web applications that leave a positive impact.
-        </div>
-        <div *ngIf="isshowmore">
-          I believe in the power of collaboration and continuous learning. The ever-evolving landscape of web development keeps me motivated to stay updated with the latest trends and best practices in the field. This commitment to growth allows me to deliver high-quality solutions and exceed user expectations.
-          Outside of the coding world, I am [mention any hobbies or interests you'd like to share]. These passions provide me with a fresh perspective and creative inspiration that I often bring into my work.
-          Feel free to connect with me if you share a passion for web development or simply want to chat about the latest tech trends. I'm always excited to collaborate and learn from fellow professionals in the industry.
-        </div>
-        <div *ngIf="isshowmore">
-          Thank you for visiting my profile, and I look forward to connecting with you!
-        </div>
-         <button (click)="showLessMore()">{{btnName}}</button>
-    </div>
- <!-- running ball on top -->
-    <div class="animation">
-      <div class="circle"></div>
-    </div>
-
+<div class="main">
+  <!-- Skills section -->
+  <div class="Skills">
+    <h4>Skills</h4>
+    <p>Languages: TypeScript, JavaScript, HTML5, CSS3, JAVA</p>
+    <p> • Front-end Frameworks: Angular (Angular 2+)</p>
+    <p>•Version Control: Git, GitHub</p>
+    <p>•Build Tools: p m , Docker, Jenkins</p>
+    <p>•Testing: unit testing</p>
+    <p>•RESTful Services: Consuming and building</p>
   </div>
 
+  <!-- Certification section -->
+  <div class="certification">
+    <h4>Certification</h4>
+    <p>•Angular Certification: Basic to Advanced</p>
+  </div>
+
+  <!-- About Me section -->
+  <div class="about">
+    <h4>About Me:</h4>
+    <p><span>Hello</span>, I'm Mangesh Sanjay Kadus, a passionate Front-End Developer with a strong focus on creating dynamic user interfaces and seamless API integrations. My journey in the world of web development has been both enriching and fulfilling.</p>
+    <button (click)="showLessMore()">{{btnName}}</button>
+    <div class="more-info" [class.show-more]="isshowmore">
+      My professional journey began at Tata Consultancy Services, where I honed my skills and expertise as a Frontend Developer. During my time there, I had the opportunity to work on diverse projects, gaining valuable experience in crafting responsive and visually appealing user interfaces. Currently, I am proud to be a part of the talented team at Bajaj Finserv Direct Limited, where I continue to thrive as a Frontend Developer. My responsibilities here include UI creation and the integration of APIs, ensuring that our applications not only look fantastic but also function flawlessly. Working with cutting-edge technologies, particularly the Angular framework, has been my forte. I find immense joy in transforming design concepts into interactive, user-friendly web applications that leave a positive impact. I believe in the power of collaboration and continuous learning. The ever-evolving landscape of web development keeps me motivated to stay updated with the latest trends and best practices in the field. This commitment to growth allows me to deliver high-quality solutions and exceed user expectations. Outside of the coding world, I am [mention any hobbies or interests you'd like to share]. These passions provide me with a fresh perspective and creative inspiration that I often bring into my work. Feel free to connect with me if you share a passion for web development or simply want to chat about the latest tech trends. I'm always excited to collaborate and learn from fellow professionals in the industry. Thank you for visiting my profile, and I look forward to connecting with you!
+    </div>
+  </div>
+
+  <!-- Running ball animation -->
+  <div class="animation">
+    <div class="circle"></div>
+  </div>
+</div>

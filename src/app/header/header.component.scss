@@ -5,7 +5,9 @@ header {
   padding: 10px;
   text-align: center;
 }
-
+.active {
+  border-bottom: 2px solid white;
+}
 nav {
   display: flex;
   justify-content: center;
